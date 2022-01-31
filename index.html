@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>My Personal Website</title>
+   <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tool-online/icons@v1.7.2/font/bootstrap-icons.css" type="text/css" media="all" />
+   <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+      <div class="menu">
+      <ul>
+         <a href="#about">
+            <li>About</li>
+         </a>
+          
+         <a href="#skill">
+            <li>Skills</li>
+         </a>
+         <a href="#portfolio">
+            <li>Portfolio</li>
+         </a>
+         <a href="#contact">
+            <li>Contact</li>
+         </a>
+      </ul>
+   </div>
+   <section class="s1">
+      <div class="header navbar">
+         <h1>John Doe</h1>
+         <div class="menu-btn">
+            <input type="checkbox" id="btn" onclick="opennav()"/>
+            <i class="bi-list"></i>
+         </div>
+      </div>
+      <h1 class="title">Hello, It's Me <br></h1>
+      <h1 class="name">John Doe</h1>
+      <p class="subtitle">I Am A Front-End Developer And UI Designer</p>
+      <a href="">Scroll For More</a>
+   </section>
+   <section class="s2 about" id="about">
+      <h1 class="title">About Me</h1>
+      <p class="description">
+         My name is John Doe and I'm 21 years old now. I am a front end developer and UI designer from Malaysia. I have learned the front end and design skills about 2 years. I am trying my best to improve my design skills and make more perfect and beautiful design for the website in the future. I am not a native English speaker so that there may be many grammer mistake in this website but I hope you are more focused about my website design but not my English grammer.
+      </p>
+   </section>
+   <section class="s3 skill" id="skill">
+      <h1 class="title">My Skills</h1>
+      <div class="skills-container">
+         <div class="skill-list">
+            <div class="skill-name">
+               <h3>HTML</h3>
+            </div>
+            <div class="skill-star">
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star"></i>
+            </div>
+         </div>
+         <div class="skill-list">
+            <div class="skill-name">
+               <h3>CSS</h3>
+            </div>
+            <div class="skill-star">
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star"></i>
+            </div>
+         </div>
+         <div class="skill-list">
+            <div class="skill-name">
+               <h3>JavaScript</h3>
+            </div>
+            <div class="skill-star">
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star-fill"></i>
+               <i class="bi-star"></i>
+               <i class="bi-star"></i>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="s4" id="portfolio">
+      <h1 class="title">Portfolio</h1>
+      <div class="portfolio-flex">
+         <div class="project">
+            <img src="project/1.png" alt="landing page design"/>
+         </div>
+         <div class="project">
+            <img src="project/2.png" alt="landing page design"/>
+         </div>
+         <div class="project">
+            <img src="project/3.png" alt="landing page design"/>
+         </div>
+         <div class="project">
+            <img src="project/4.png" alt="Login form design"/>
+         </div>
+      </div>
+   </section>
+   <section class="s5" id="contact">
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info">
+      <i class="bi-telephone"></i><span>0123456789</span><br>
+      <i class="bi-envelope"></i><span>example123@example.com</span><br>
+      <i class="bi-instagram"></i><span>@example_account</span><br />
+      <i class="bi-github"></i><span>https://github.com/examplelink</span>
+      </div>
+   </section>
+   <div class="backtop" onclick="gotop()">
+      <i class="bi-arrow-up"></i>
+   </div>
+<script>
+   function gotop(){
+      document.documentElement.scrollTop = 0;
+   }
+</script>
+<script>
+ScrollReveal().reveal('.project img',{
+   interval: 300,
+   viewFactor: 0.5,
+   origin: 'right',
+   delay: 100,
+   duration: 2000,
+   distance: '50px'
+});
+ScrollReveal().reveal('i.bi-star-fill,i.bi-star',{
+   interval: 120,
+   viewFactor: 0.5,
+   origin: 'bottom',
+   delay: 100,
+   duration: 300,
+   distance: '10px'
+});
+ScrollReveal().reveal('h1.title',{
+   viewFactor: 0.5,
+   origin: 'left',
+   delay: 100,
+   duration: 2000,
+   distance: '30px'
+});
+ScrollReveal().reveal('p.description',{
+   viewFactor: 0.5,
+   origin: 'bottom',
+   delay: 100,
+   duration: 2500,
+   distance: '80px'
+});
+ScrollReveal().reveal('h1.name',{
+   origin: 'left',
+   delay: 300,
+   duration: 1500,
+   distance: '30px'
+});
+ScrollReveal().reveal('p.subtitle',{
+   origin: 'bottom',
+   delay: 500,
+   duration: 2500,
+   distance: '30px'
+});
+ScrollReveal().reveal('.s1 a',{
+   origin: 'left',
+   delay: 800,
+   duration: 2500,
+   distance: '50px'
+});
+
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+if(scrollY >= 180){
+   navbar.classList.add('bg');
+}else{
+   navbar.classList.remove('bg');
+}
+})
+
+function opennav(){
+   const menu = document.querySelector('.menu');
+   const header = document.querySelector('.header');
+   const btn = document.querySelector('#btn');
+   if(btn.checked == true){
+      menu.style.top = "0";
+      header.classList.add('white')
+   }else{
+      menu.style.top = "-100vh";
+      header.classList.remove('white')
+   }
+}
+</script>
+</body>
+</html>
